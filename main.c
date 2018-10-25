@@ -6,9 +6,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-//Question 1
+/***********************************************************Question 1*************************************************************/
 //Using a for loop
-/*int main()
+int main()
 {
     int i, sum=0;
     for (i=30; i<=1000; i++)
@@ -20,10 +20,9 @@
     }
     printf("The sum of all numbers from 30 to 1000 that are divisible by 4 is %d.\n", sum);
     return 0;
-}*/
-
+}
 //Using a while loop
-/*int main(void)
+int main(void)
 {
     int i=30, sum=0;
     while(i<1001)
@@ -36,10 +35,9 @@
     }
     printf("The sum of all numbers from 30 to 1000 that are divisible by 4 is %d.\n", sum);
     return 0;
-}*/
-
+}
 //Using a do-while loop
-/*int main(void)
+int main(void)
 {
     int i=30, sum=0;
     do
@@ -53,10 +51,10 @@
     while(i<=1000);
     printf("The sum of all numbers from 30 to 1000 that are divisible by 4 is %d.\n", sum);
     return 0;
-}*/
+}
 
-//Question 2
-/*int main(void)
+/***********************************************************Question 2*************************************************************/
+int main(void)
 {
     int num;
     printf("Enter a positive number to end the program\n");
@@ -68,10 +66,10 @@
     }
     printf("Your number is %d.", num);
     return 0;
-}*/
+}
 
-//Question 3
-/*int main (void)
+/***********************************************************Question 3*************************************************************/
+int main (void)
 {
     int i, counter=-1, number, smallest;
     while(counter<0)
@@ -92,10 +90,10 @@
     }
     printf("The smallest number is %d", smallest);
     return 0;
-}*/
+}
 
-//Question 4
-/*int main(void)
+/***********************************************************Question 4*************************************************************/
+int main(void)
 {
     int i=0, num;
     do
@@ -111,10 +109,10 @@
     while(num!=0);
     printf("Thank you for using my software. Bye");
     return 0;
-}*/
+}
 
-//Question 5
-/*int main(void)
+/***********************************************************Question 5*************************************************************/
+int main(void)
 {
     float avg;
     printf("Please enter the students average: ");
@@ -134,9 +132,9 @@
         default : printf("Invalid Input\n");
     }
     return 0;
-}*/
+}
 
-//Question 6
+/***********************************************************Question 6*************************************************************/
 /*int main(void)
 {
     float sum=0;
@@ -156,10 +154,10 @@
     }
     printf("The sum of the first %d terms is %f", n, sum);
     return 0;
-}*/
+}
 
-//Question 7
-/*int main(void)
+/***********************************************************Question 7*************************************************************/
+int main(void)
 {
     int side1, side2, hyp, sumsquare, counter;
     for(side1=1; side1<=400; side1++)
@@ -179,10 +177,10 @@
     }
     printf("There are %d tuples", counter);
     return 0;
-}*/
+}
 
-//Question 8
-/*int main(void)
+/***********************************************************Question 8*************************************************************/
+int main(void)
 {
     int i, j, m, sum;
     printf("What is the value of m (max value): ");
@@ -204,10 +202,11 @@
         }
     }
     return 0;
-}*/
+}
 
-//Quesiton 9a)
-/*int main(void)
+/***********************************************************Question 9*************************************************************/
+//9a)
+int main(void)
 {
     int i, j, n=0;
     while(n<1 || n>25 || n%2 == 0)
@@ -224,11 +223,11 @@
         printf("\n");
     }
     return 0;
-}*/
-//9b)
+}
+//9b)  NOT DONE
 
 //9c)
-/*int main(void)
+int main(void)
 {
     int i, j, n=0, m;
     while(n<1 || n>25 || n%2 == 0)
@@ -247,10 +246,10 @@
         m=m-2;
     }
     return 0;
-}*/
+}
 
 //9d) NOT DONE
-/*int main(void)
+int main(void)
 {
     int i, j, n=0, m, o;
     while(n<1 || n>25 || n%2 == 0)
@@ -291,10 +290,10 @@
         m +=2;
     }
     return 0;
-}*/
+}
 
-//Question 10
-/*int main(void)
+/***********************************************************Question 10************************************************************/
+int main(void)
 {
     int num, digits=0;
     printf("Enter an integer: ");
@@ -306,9 +305,10 @@
     }
     printf("Your number has %d digits.", digits);
     return 0;
-}*/
+}
 
-//Question 11a) (NOT DONE)
+/***********************************************************Question 11************************************************************/
+//11a) NOT DONE
 /*int main(void)
 {
     int i, num;
@@ -318,8 +318,8 @@
     return 0;
 }*/
 
-//Question 12
-/*int main(void)
+/***********************************************************Question 12************************************************************/
+int main(void)
 {
     int bin, dec=0, remainder, multiplier=1;
     printf("Input your binary integer\n");
@@ -333,11 +333,11 @@
     }
     printf("Your number is %d.", dec);
     return 0;
-}*/
+}
 
-//Question 13
+/***********************************************************Question 13************************************************************/
 //a)
-/*int main(void)
+int main(void)
 {
     int i, num, factorial=1;
     printf("Enter your factorial:  ");
@@ -348,11 +348,11 @@
     }
     printf("The factorial of %d is %d.", num, factorial);
     return 0;
-}*/
+}
 //b)
 //c)
 
-//Question 14
+/***********************************************************Question 14*************************************************************/
 int main(void)
 {
     int num, i, sumfactor=0;

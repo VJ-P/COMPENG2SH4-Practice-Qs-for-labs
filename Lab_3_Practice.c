@@ -7,8 +7,8 @@
 #include <stdlib.h>
 #include <string.h>
 
-//Question 1
-/*char *my_strcat( const char * const str1, const char * const str2); //function prototype
+/***********************************************************Question 1***********************************************************/
+char *my_strcat( const char * const str1, const char * const str2); //function prototype
 int main()  //Main function to test program
 {
     printf("%s \n", my_strcat("Hello", "world!"));
@@ -30,9 +30,9 @@ char *my_strcat( const char * const str1, const char * const str2)
     }
     concat[n-1]= '\0';
     return concat;
-}*/
+}
 
-//Question 2
+/***********************************************************Question 2***********************************************************/
 //Create Struc
 typedef struct
 {
@@ -156,7 +156,7 @@ void compute_final_class_grades(student **list, int size)
     }
 }
 
-//output_final_course_grades function NOT WORKING
+//output_final_course_grades function ********************************************************************NOT WORKING
 void output_final_course_grades(char *filename, student** list, int size)
 {
     FILE *output=fopen(filename, "r");

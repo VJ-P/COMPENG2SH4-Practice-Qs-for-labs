@@ -60,49 +60,51 @@ int main(void)
     ptrA= create_class_list("classlist.txt", &classSize);
 
     //Test for Function create_class_list()
-    /*for (int i=0; i<classSize; i++)
+    for (int i=0; i<classSize; i++)
     {
         printf("%d %s %s\n", ptrA[i]->idNum, ptrA[i]->firstName, ptrA[i]->lastName);
-    }*/
+    }
 
     //Test for Function find()
-    //printf("%d", find(9000, ptrA, classSize));
+    printf("%d", find(9000, ptrA, classSize));
 
     //Test for Function classgrade()
     input_grades("classgrade.txt", ptrA, classSize);
-    /*for (int i=0; i<classSize; i++)
+    for (int i=0; i<classSize; i++)
     {
         printf("%d %s %s %d %d\n", ptrA[i]->idNum, ptrA[i]->firstName, ptrA[i]->lastName, ptrA[i]->project1, ptrA[i]->project2);
-    }*/
+    }
 
     //Test for compute_final_course_grades()
     compute_final_class_grades(ptrA, classSize);
-    /*for (int i=0; i<classSize; i++)
+    for (int i=0; i<classSize; i++)
     {
         printf("%d %s %s %d %d %0.1f\n", ptrA[i]->idNum, ptrA[i]->firstName, ptrA[i]->lastName, ptrA[i]->project1, ptrA[i]->project2, ptrA[i]->courseGrade);
-    }*/
+    }
 
     //Test for output_final_course_grades()
-    /*output_final_course_grades("finalcoursegrades.txt", ptrA, classSize);
+    output_final_course_grades("finalcoursegrades.txt", ptrA, classSize);
     FILE *finalgrades=fopen("finalcoursegrades.txt", "r");
+    fscanf(finalgrades, "%d", &c);
+    printf("%d\n", c);
     for(int i=0; i<classSize; i++)
     {
         fscanf(finalgrades, "%d %f", &a, &b);
-        printf("%d %f\n", a, b);
-    }*/
+        printf("%d %0.1f\n", a, b);
+    }
 
 
     //Test for void print_list()
     print_list(ptrA, classSize);
 
     //Test for withdraw()
-    /*withdraw(9000, ptrA, &classSize);
-    printf("\nThe class has %d students now.\n", classSize);*/
+    withdraw(9000, ptrA, &classSize);
+    printf("\nThe class has %d students now.\n", classSize);
 
     //Test for destroy_list()
-    /*destroy_list(ptrA, &classSize);
+    destroy_list(ptrA, &classSize);
     printf("\nThe class has %d students now.\n", classSize);
-    print_list(ptrA, classSize);*/
+    print_list(ptrA, classSize);
 
     return 0;
 }
@@ -156,14 +158,14 @@ void compute_final_class_grades(student **list, int size)
     }
 }
 
-//output_final_course_grades function ********************************************************************NOT WORKING
+//output_final_course_grades function
 void output_final_course_grades(char *filename, student** list, int size)
 {
-    FILE *output=fopen(filename, "r");
-    fprintf("%d", size);
+    FILE *output=fopen(filename, "w");
+    fprintf(output, "%d\n", size);
     for(int i=0; i<size; i++)
     {
-        fprintf("%d %f\n", list[i]->idNum, list[i]->courseGrade);
+        fprintf(output, "%d %f\n", list[i]->idNum, list[i]->courseGrade);
     }
     fclose(output);
 }

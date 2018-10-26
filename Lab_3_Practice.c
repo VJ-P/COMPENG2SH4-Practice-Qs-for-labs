@@ -117,10 +117,10 @@ student **create_class_list(char *filename, int *sizePtr)
     student** studentList= malloc(*sizePtr*sizeof(student*)); //allocate memory for an array of 3 pointers to struc of type student
     for (int i=0; i<*sizePtr;i++) // for loop that runs to record students
     {
-        studentList[i]= calloc(1, sizeof(student));
+        studentList[i]= calloc(1, sizeof(student)); //splits the memory we created above for each student. Used calloc because it initializes all non inputed value to 0 (project1, project2, coursegrade.)
         fscanf(classList, "%d%s%s", &(studentList[i]->idNum), &(studentList[i]->firstName), &(studentList[i]->lastName));
     }
-    fclose(classList);
+    fclose(classList);  //closes the file
     return studentList;
 }
 
@@ -154,7 +154,7 @@ void compute_final_class_grades(student **list, int size)
 {
     for (int i=0; i<size; i++)
     {
-        list[i]->courseGrade= ((float)list[i]->project1 + (float)list[i]->project2)/2;
+        list[i]->courseGrade= ((float)list[i]->project1 + (float)list[i]->project2)/2; //converted the project grades to float so that it wouldnt round to an interger.
     }
 }
 

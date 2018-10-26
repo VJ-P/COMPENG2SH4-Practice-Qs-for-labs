@@ -1,13 +1,16 @@
 //Vijay Patel
 //Oct 01, 2018
-//400124306
+//McMaster Univeristy
+//Computer Eng and Management
+
+//This respository is incomplete. I was only able to complete up to question 7.
 
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
 
-//Question 1
-/*void print_vector(double array[], int size);
+/*************************************************Question 1*************************************************/
+void print_vector(double array[], int size);
 void print_vector(double array[], int size)
 {
     int i;
@@ -15,8 +18,9 @@ void print_vector(double array[], int size)
     {
         printf("%lf, ", array[i]);
     }
-}*/
-/*void add_vectors(double vector1[], double vector2[], double vector3[], int n);
+}
+
+void add_vectors(double vector1[], double vector2[], double vector3[], int n);
 void add_vectors(double vector1[], double vector2[], double vector3[], int n)
 {
     int i;
@@ -24,9 +28,9 @@ void add_vectors(double vector1[], double vector2[], double vector3[], int n)
     {
        vector3[i]= vector1[i] + vector2[i];
     }
-}*/
+}
 
-/*double norm2(double vec1[], double vec2[], int n);
+double norm2(double vec1[], double vec2[], int n);
 double scalar_prod(double vec3[], double vec4[], int m);
 double norm2(double vec1[], double vec2[], int n)
 {
@@ -44,10 +48,10 @@ double scalar_prod(double vec3[], double vec4[], int m)
         temp1+= vec3[i] * vec4[i];
     }
     return temp1;
-}*/
+}
 
-//Question 2
-/*void sorted(int array[], int n);
+/*************************************************Question 2*************************************************/
+void sorted(int array[], int n);
 void sorted(int array[], int n)
 {
     int i, temp=0;
@@ -66,10 +70,10 @@ void sorted(int array[], int n)
     {
         printf("The array is sorted.");
     }
-}*/
+}
 
-//Question 3
-/*void freq(int array[], int n, int numb);
+/*************************************************Question 3*************************************************/
+void freq(int array[], int n, int numb);
 void freq(int array[], int n, int numb)
 {
     int i, temp=0;
@@ -81,10 +85,10 @@ void freq(int array[], int n, int numb)
         }
     }
     printf("The number %d apprears in the array exactly %d times.\n", numb, temp);
-}*/
+}
 
-//Question 4
-/*void change(int x[], int n);
+/*************************************************Question 4*************************************************/
+void change(int x[], int n);
 void change(int x[], int n)
 {
     int i, j=0, temp[n];
@@ -104,10 +108,10 @@ void change(int x[], int n)
     {
         x[i]= temp[i];
     }
-}*/
+}
 
-//Question 5
-/*#define N 3
+/*************************************************Question 5*************************************************/
+#define N 3
 int is_diag_dom(int mat[][N]);
 int is_diag_dom(int mat[][N])
 {
@@ -135,10 +139,10 @@ int is_diag_dom(int mat[][N])
     {
         return 0;
     }
-}*/
+}
 
-//Question 6
-/*#define N 4
+/*************************************************Question 6*************************************************/
+#define N 4
 void scanorder(int mat[][N]);
 void scanorder(int mat[][N])
 {
@@ -157,10 +161,10 @@ void scanorder(int mat[][N])
             printf("%d, ", mat[i][j+(N-1)-i]);
         }
     }
-}*/
+}
 
-//Question 7
-/*int is_toeplitz(int a[][N], int m);
+/*************************************************Question 7*************************************************/
+int is_toeplitz(int a[][N], int m);
 int is_toeplitz(int a[][N], int m)
 {
     int rowNum, colNum;
@@ -175,9 +179,10 @@ int is_toeplitz(int a[][N], int m)
         }
     }
     return 1;
-}*/
+}
 
-//Question 8
+/*************************************************Question 8*************************************************/\
+//NOT DONE
 void letter_freq(const char word[], int freq[]);
 int main(void)
 {

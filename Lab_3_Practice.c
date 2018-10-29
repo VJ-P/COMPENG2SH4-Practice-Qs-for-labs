@@ -221,7 +221,60 @@ void destroy_list(student **list, int *sizePtr)
 }
 
 
+/************************************************************Question 3*************************************************************/
+//Function Prototype
+char **read_words(const char *input_filename, int *nPtr);
+void sort_words(char **wordList, int *nPtr);
+void output_words(char **wordList, int *nPtr);
 
+int main()
+{
+    int num;
+    char** ptrA;
+    ptrA= read_words("words.txt", &num);
+    sort_words(ptrA, &num);
+    output_words(ptrA, &num);
+    return 0;
+}
+
+char **read_words(const char *input_filename, int *nPtr)
+{
+    FILE *wordFile = fopen(input_filename, "r");
+    fscanf(wordFile, "%d", nPtr); //scans for the number of words
+    char **wordList = malloc(*nPtr*sizeof(char*)); //allocates memory for the array
+    for(int i=0; i<*nPtr; i++)
+    {
+        wordList[i]= malloc(sizeof(char)); //allocates memory needed for each word
+        fscanf(wordFile, "%s", wordList[i]); //scans the word
+    }
+    fclose(wordFile); //closes file
+    return wordList;
+}
+
+void sort_words(char **wordList, int *nPtr)
+{
+    char *temp =malloc(sizeof(char));  //allocate memory for a temp pointer
+    for(int i=0; i<*nPtr; i++)
+    {
+        for (int j=i+1; j<*nPtr; j++)
+        {
+            if(strcmp(wordList[i], wordList[j])>0)
+            {
+                temp= wordList[j];
+                wordList[j]= wordList[i];
+                wordList[i]=temp;
+            }
+        }
+    }
+}
+
+void output_words(char **wordList, int *nPtr)
+{
+    for(int i=0; i<*nPtr; i++)
+    {
+        printf("%s\n", wordList[i]);
+    }
+}
 
 
 
